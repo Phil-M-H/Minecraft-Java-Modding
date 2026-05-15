@@ -74,11 +74,11 @@ public class PageAlchemyArray extends Page {
         GuiHelper.drawItemStack(catalystStack, catalystX, catalystY);
 
         if (GuiHelper.isMouseBetween(mouseX, mouseY, inputX, inputY, 15, 15)) {
-            guiBase.renderToolTip(inputStack, mouseX, mouseY);
+//            guiBase.renderToolTip(inputStack, mouseX, mouseY);
         }
 
         if (GuiHelper.isMouseBetween(mouseX, mouseY, catalystX, catalystY, 15, 15)) {
-            guiBase.renderToolTip(catalystStack, mouseX, mouseY);
+//            guiBase.renderToolTip(catalystStack, mouseX, mouseY);
         }
 
         if (!outputStack.isEmpty()) {
@@ -87,7 +87,7 @@ public class PageAlchemyArray extends Page {
 
             GuiHelper.drawItemStack(outputStack, outputX, outputY);
             if (GuiHelper.isMouseBetween(mouseX, mouseY, outputX, outputY, 15, 15)) {
-                guiBase.renderToolTip(outputStack, mouseX, mouseY);
+//                guiBase.renderToolTip(outputStack, mouseX, mouseY);
             }
         }
     }

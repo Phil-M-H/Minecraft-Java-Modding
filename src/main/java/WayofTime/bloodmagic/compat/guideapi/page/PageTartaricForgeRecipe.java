@@ -66,7 +66,7 @@ public class PageTartaricForgeRecipe extends Page {
                         GuiHelper.drawItemStack((ItemStack) component, stackX, stackY);
                         if (GuiHelper.isMouseBetween(mouseX, mouseY, stackX, stackY, 15, 15)) {
 //                            tooltips = GuiHelper.getTooltip((ItemStack) component);
-                            guiBase.renderToolTip((ItemStack) component, mouseX, mouseY);
+//                            guiBase.renderToolTip((ItemStack) component, mouseX, mouseY);
                         }
                     } else if (component instanceof Integer) {
                         List<ItemStack> list = OrbRegistry.getOrbsDownToTier((Integer) component);
@@ -75,7 +75,7 @@ public class PageTartaricForgeRecipe extends Page {
                             GuiHelper.drawItemStack(stack, stackX, stackY);
                             if (GuiHelper.isMouseBetween(mouseX, mouseY, stackX, stackY, 15, 15)) {
 //                                tooltips = GuiHelper.getTooltip(stack);
-                                guiBase.renderToolTip(stack, mouseX, mouseY);
+//                                guiBase.renderToolTip(stack, mouseX, mouseY);
                             }
                         }
                     } else {
@@ -85,7 +85,7 @@ public class PageTartaricForgeRecipe extends Page {
                             GuiHelper.drawItemStack(stack, stackX, stackY);
                             if (GuiHelper.isMouseBetween(mouseX, mouseY, stackX, stackY, 15, 15)) {
 //                                tooltips = GuiHelper.getTooltip(stack);
-                                guiBase.renderToolTip(stack, mouseX, mouseY);
+//                                guiBase.renderToolTip(stack, mouseX, mouseY);
                             }
                         }
                     }
@@ -106,7 +106,7 @@ public class PageTartaricForgeRecipe extends Page {
         int outputY = (20) + (guiTop + guiBase.xSize / 5) + 10; // 1 * 20
         GuiHelper.drawItemStack(output, outputX, outputY);
         if (GuiHelper.isMouseBetween(mouseX, mouseY, outputX, outputY, 15, 15)) {
-            guiBase.renderToolTip(output, outputX, outputY);
+//            guiBase.renderToolTip(output, outputX, outputY);
         }
 
         if (output.getItem() == Item.getItemFromBlock(Blocks.BARRIER)) {

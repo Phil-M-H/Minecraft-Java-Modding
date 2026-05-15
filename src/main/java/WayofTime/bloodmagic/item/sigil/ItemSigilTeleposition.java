@@ -59,6 +59,10 @@ public class ItemSigilTeleposition extends ItemSigilBase {
         Binding binding = getBinding(stack);
         if (!world.isRemote && location != null && binding != null) {
             World teleportTo = DimensionManager.getWorld(location.dim);
+            if (teleportTo == null) {
+                DimensionManager.initDimension(location.dim);
+                teleportTo = DimensionManager.getWorld(location.dim);
+            }
             if (teleportTo != null) {
                 TileEntity tile = teleportTo.getTileEntity(location.pos);
                 if (tile instanceof TileTeleposer) {

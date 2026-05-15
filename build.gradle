@@ -9,6 +9,7 @@ buildscript {
     }
 }
 
+
 plugins {
     id "net.minecraftforge.gradle.forge" version "2.0.2"
     id 'com.matthewprenger.cursegradle' version '1.1.0'
@@ -29,14 +30,20 @@ version = "${mc_version}-${mod_version}-${build_number}"
 
 repositories {
     maven { url "http://dvs1.progwml6.com/files/maven" }
-    maven { url "http://tehnut.info/maven" }
-}
+    maven {
+        url "https://cursemaven.com"
+    }}
 
 dependencies {
     deobfCompile "mezz.jei:jei_${mc_version}:${jei_version}"
-    deobfCompile "mcp.mobius.waila:Hwyla:${waila_version}"
-    deobfCompile "info.amerifrance.guideapi:Guide-API:${guideapi_version}"
+    implementation "curse.maven:hwyla-253449:2568751"
+    implementation "curse.maven:guide-228832:2645992"
 }
+//dependencies {
+//    deobfCompile "mezz.jei:jei_${mc_version}:${jei_version}"
+//    deobfCompile "mcp.mobius.waila:Hwyla:${waila_version}"
+//    deobfCompile "info.amerifrance.guideapi:Guide-API:${guideapi_version}"
+//}
 
 minecraft {
     version = "${mc_version}-${forge_version}"
@@ -47,8 +54,7 @@ minecraft {
 
     clientRunArgs += "--username=${username}"
 
-    if (project.hasProperty('mappings_version'))
-        mappings = project.mappings_version
+    mappings = "stable_39"
 }
 
 processResources {

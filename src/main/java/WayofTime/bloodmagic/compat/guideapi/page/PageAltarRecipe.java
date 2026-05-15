@@ -46,7 +46,7 @@ public class PageAltarRecipe extends Page {
         int inputY = (20) + (guiTop + guiBase.ySize / 5) - 1; //1 * 20
         GuiHelper.drawItemStack(input.get(0), inputX, inputY);
         if (GuiHelper.isMouseBetween(mouseX, mouseY, inputX, inputY, 15, 15)) {
-            guiBase.renderToolTip(input.get(0), mouseX, mouseY);
+//            guiBase.renderToolTip(input.get(0), mouseX, mouseY);
         }
 
         if (output.isEmpty()) {
@@ -56,7 +56,7 @@ public class PageAltarRecipe extends Page {
         int outputY = (20) + (guiTop + guiBase.xSize / 5) - 1; // 1 * 20
         GuiHelper.drawItemStack(output, outputX, outputY);
         if (GuiHelper.isMouseBetween(mouseX, mouseY, outputX, outputY, 15, 15)) {
-            guiBase.renderToolTip(output, outputX, outputY);
+//            guiBase.renderToolTip(output, outputX, outputY);
         }
 
         if (output.getItem() == Item.getItemFromBlock(Blocks.BARRIER)) {
